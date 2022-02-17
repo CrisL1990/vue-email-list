@@ -6,35 +6,28 @@ const app = new Vue({
 
         iterations: 10,
         address: "",
-        mailList: [],
+        mylList: [],
+        start: false,
+    },
+
+    methods:{
+
+        startGeneration: function(){
+            this.start = true;
+        }
     },
 
     mounted() {
         //this.apiRequest(this.iterations);
-        /*
+        
         for(let i = 0; i < this.iterations; i++){
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
 
             .then((element) => {
-                this.mailList.push(element.data.response);
+                this.mylList.push(element.data.response);
             })
-        }*/ 
+        }
     },
 
-    methods:{
-        
-        apiRequest: function(iterations){
 
-            for(let i = 0; i < iterations; i++){
-                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-
-                .then((element) => {
-                    this.mailList.push(element.data.response);
-                })
-            } 
-        }
-        
-
-
-    }
 })

@@ -10,9 +10,9 @@
 
     <div id="root">
 
-        <button @click="apiRequest(iterations)">Genera indirizzi</button>
+        <button @click="startGeneration">Genera indirizzi</button>
 
-        <ul v-for="address in mailList">
+        <ul v-if="start == true" v-for="address in mylList">
             <li>{{address}}</li>
         </ul>
 
