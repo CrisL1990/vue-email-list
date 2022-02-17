@@ -10,7 +10,7 @@
 
     <div id="root">
 
-        <button>Genera indirizzi</button>
+        <button @click="apiRequest(iterations)">Genera indirizzi</button>
 
         <ul v-for="address in mailList">
             <li>{{address}}</li>
